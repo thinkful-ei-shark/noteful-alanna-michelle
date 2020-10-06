@@ -14,7 +14,7 @@ export default function NoteList(props){
 
     const finalList = filterList().map((note) => {
             return(
-                <NoteItemList key = {note.id} name= {note.name} folderId= {note.folderId}/>
+                <NoteItemList key = {note.id} name= {note.name} id= {notes.id} folderId= {note.folderId}/>
             )
         })
 
