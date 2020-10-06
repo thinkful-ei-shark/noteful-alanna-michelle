@@ -7,24 +7,17 @@ import FolderPage from './FolderPage';
 import store from './store.js';
 
 class App extends Component {
-    state = {
-     folderId: '',
-  }
 
-    getFolderID(folderID){
-      this.setState({folderID})   
-    }
-  
     render(){
       return (
         <div>
         <Route 
           exact path = '/'
-          component = {MainPage}
+          component ={MainPage}
           />
         <Route
           path = '/folders/:folderId'
-          render = {() => <FolderPage folderId = {this.state.folderId}/>}
+          component={FolderPage}
           />
         </div>
       )

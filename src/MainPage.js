@@ -15,7 +15,7 @@ export default class MainPage extends React.Component {
             <div className='mainPage'>
                 <Header />
                 <main>
-                    <FolderList folders={this.state.folders}/>
+                    <FolderList getFolderId = {this.props.getFolderID} folders={this.state.folders}/>
                     <NoteList notes={this.state.notes}/>
                 </main>
             </div>

@@ -17,7 +17,7 @@ export default class FolderPage extends React.Component {
             <Header />
             <main>
                 <FolderList folders={this.state.folders}/>
-                <NoteList notes = {this.state.notes} folderId = {this.props.folderId}/>
+                <NoteList notes = {this.state.notes} folderId = {this.props.match.params.folderId}/>
             </main>
         </div>
         
