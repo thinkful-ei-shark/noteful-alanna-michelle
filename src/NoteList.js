@@ -3,7 +3,16 @@ import NoteItemList from './NoteItemList';
 import './NoteList.css';
 
 export default function NoteList(props){
-    const list = props.notes.map((note) => {
+    const filterList = function() {
+        if(props.folderId){
+            return props.notes.filter(note => note.folderId === props.folderId) 
+         }else {
+            return props.notes
+        }
+        
+    }
+
+    const finalList = filterList().map((note) => {
             return(
                 <NoteItemList key = {note.id} name= {note.name} folderId= {note.folderId}/>
             )
@@ -13,7 +22,7 @@ export default function NoteList(props){
     return (
         <div className= 'notes'>
             <ul>
-                {list}
+                {finalList}
             </ul>
         </div>
     )
