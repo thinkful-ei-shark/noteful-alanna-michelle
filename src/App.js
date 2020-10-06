@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import Header from './Header';
 import FolderList from './FolderList';
+import NoteList from './NoteList';
 
 class App extends Component {
     state = {
@@ -126,9 +127,8 @@ class App extends Component {
         <main className='App'>
           <Header />
           <FolderList folders={this.state.folders}/>
-        </main>
-      );
-    }
+          <NoteList notes={this.state.notes}/>
+     }
 }
 
 export default App;
