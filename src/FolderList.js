@@ -1,11 +1,10 @@
 import React from 'react';
+import FolderItem from './FolderItem';
 
 export default function FolderList(props){
-    const list = props.folders.map((folder, key) => {
+    const list = props.folders.map((folder) => {
             return(
-                <li key = {folder.id}>
-                    <h3>{folder.name}</h3>
-                </li>
+                <FolderItem key = {folder.id} name= {folder.name} />
             )
         })
     return (
