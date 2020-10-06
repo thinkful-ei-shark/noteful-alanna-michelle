@@ -1,5 +1,6 @@
 import React from 'react';
 import FolderItem from './FolderItem';
+import './FolderList.css'
 
 export default function FolderList(props){
     const list = props.folders.map((folder) => {
@@ -8,8 +9,10 @@ export default function FolderList(props){
             )
         })
     return (
-        <ul>
-            {list}
-        </ul>
+        <div className= 'folders'>
+            <ul>
+                {list}
+            </ul>
+        </div>
     )
 }

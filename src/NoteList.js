@@ -1,5 +1,6 @@
 import React from 'react';
 import NoteItemList from './NoteItemList';
+import './NoteList.css';
 
 export default function NoteList(props){
     const list = props.notes.map((note) => {
@@ -8,8 +9,10 @@ export default function NoteList(props){
             )
         })
     return (
-        <ul>
-            {list}
-        </ul>
+        <div className= 'notes'>
+            <ul>
+                {list}
+            </ul>
+        </div>
     )
 }

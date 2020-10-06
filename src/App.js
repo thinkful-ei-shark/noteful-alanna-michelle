@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
+import './App.css'
+
 import Header from './Header';
 import FolderList from './FolderList';
 import NoteList from './NoteList';
@@ -124,10 +126,15 @@ class App extends Component {
   
     render(){
       return (
-        <main className='App'>
+        
+        <div className='App'>
           <Header />
-          <FolderList folders={this.state.folders}/>
-          <NoteList notes={this.state.notes}/>
+          <main>
+            <FolderList folders={this.state.folders}/>
+            <NoteList notes={this.state.notes}/>
+          </main>
+        </div>
+      )
      }
 }
 
