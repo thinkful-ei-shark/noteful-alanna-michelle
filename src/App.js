@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import Header from './Header';
+import FolderList from './FolderList';
 
 class App extends Component {
     state = {
@@ -124,6 +125,7 @@ class App extends Component {
       return (
         <main className='App'>
           <Header />
+          <FolderList folders={this.state.folders}/>
         </main>
       );
     }
